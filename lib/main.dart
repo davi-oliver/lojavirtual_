@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lojavirtual_/home/home.dart';
+import 'package:lojavirtual_/login/login.page.dart';
+import 'package:lojavirtual_/login/store/login-store.dart';
 import 'package:lojavirtual_/theme/globalsThemeStyle.dart';
 import 'package:lojavirtual_/theme/themeMode.dart';
 import 'package:provider/provider.dart';
@@ -23,8 +25,9 @@ class _MyAppState extends State<MyApp> {
       home: MultiProvider(
         providers: [
           Provider<ThemeModeApp>(create: (_) => ThemeModeApp()),
+          Provider<LoginStore>(create: (_) => LoginStore()),
         ],
-        child: HomePage(),
+        child: LoginPage(),
       ),
     );
   }
